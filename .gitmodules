@@ -1,0 +1,3 @@
+[submodule "Rush/rush-piscine-discovery"]
+	path = Rush/rush-piscine-discovery
+	url = https://github.com/ThiagoCh1/rush-piscine-discovery.git

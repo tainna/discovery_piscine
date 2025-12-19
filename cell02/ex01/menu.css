@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+
+    background-image: url("https://f.i.uol.com.br/folha/folhinha/images/12160465.jpeg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 1500px;
+    background-color: #f3f3f3;
+}
+
+
+.menu {
+    position: relative;
+    background: rgba(43, 0, 143, 0.9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: #333;
+    border-radius: 6px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background: #eee;
+}
+
+.menu:hover .dropdown {
+    display: block;
+}

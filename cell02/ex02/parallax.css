@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 {
+    background-image: url("https://imagenes.elpais.com/resizer/v2/LL3KKOVYQN5NFSMWTE4J3MD6ME.jpg?auth=907d287d166c88a15cbe2820526a44d26d8b926f4ae7a068a6c8376c3041b3de&width=1000");
+}
+
+.img2 {
+    background-image: url("https://media.assettype.com/dn%2Fimport%2Fdncxpgxxypnfpero%2Fzszyj2spw1ei.png?w=768&auto=format%2Ccompress&fit=max");
+}
+
+.text {
+    color: white;
+    font-size: 32px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.black-block {
+    height: 300px;
+    background: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+}

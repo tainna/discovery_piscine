@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .explode {
+            animation: boom 0.3s ease-out forwards;
+        }
+
+        @keyframes boom {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="balloon"></div>
+
+<script>
+    const balloon = document.getElementById("balloon");
+    let size = 200;
+    let colors = ["red", "green", "blue"];
+    let colorIndex = 0;
+
+    balloon.addEventListener("click", () => {
+        size += 10;
+
+        if (size > 420) {
+            balloon.classList.add("explode");
+
+            setTimeout(() => {
+                balloon.classList.remove("explode");
+                size = 200;
+                colorIndex = 0;
+                balloon.style.width = size + "px";
+                balloon.style.height = size + "px";
+                balloon.style.backgroundColor = "red";
+                balloon.style.opacity = "1";
+                balloon.style.transform = "scale(1)";
+            }, 300);
+
+            return;
+        }
+
+        balloon.style.width = size + "px";
+        balloon.style.height = size + "px";
+        balloon.style.backgroundColor = colors[colorIndex];
+        colorIndex = (colorIndex + 1) % colors.length;
+    });
+
+    balloon.addEventListener("mouseleave", () => {
+        if (size > 200) {
+            size -= 5;
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+        }
+
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        balloon.style.backgroundColor = colors[colorIndex];
+    });
+</script>
+
+</body>
+</html>
